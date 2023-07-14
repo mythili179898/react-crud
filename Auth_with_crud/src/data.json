@@ -1,0 +1,60 @@
+{
+    "products": [
+        {
+            "id": "001",
+            "title": "Memories of a Leaf",
+            "author": "F. Scott Fitzgerald",
+            "description": "Once upon a time, there lived a little cool cloud who was generous and loving. She was full of fantasy and had a strong desire to experience life. Through her adventures, the little cloud learned the value of family and friendship.",
+            "price": 120,
+            "image": "https://unescobmw.org/wp-content/uploads/2021/10/b1.jpg"
+        },
+        {
+            "id": "002",
+            "title": "If I could",
+            "author": "Harper Lee",
+            "description": "We all go through a culmination of rough times to finally learn about ourselves and life as a precious gift. I believe today that life is something between tragedies and hopes, desperations and good wishes, a killing duality that teaches you only one precious thing: be grateful and go beyond!",
+            "price": 100,
+            "image": "https://unescobmw.org/wp-content/uploads/2021/10/ae-2.jpg"
+        },
+        {
+            "id": "003",
+            "title": "Beeing",
+            "author": "George Orwell",
+            "description": "Help your child in developing his social and emotional learning. BEE’ing is a story about kindness and accepting differences, complete with activities at the end. It teaches our children to connect with their inner selves, accept themselves as they are, and respect the differences of others.",
+            "price": 300,
+            "image": "https://unescobmw.org/wp-content/uploads/2023/01/beeing-book-page.jpg"
+        },
+        {
+            "id": "004",
+            "title": "Rosy & Friends",
+            "author": "George Orwell",
+            "description": "This book was written with the intention to help the reader learn and understand the serious environmental issues we are facing such as global warming. The reader will also learn about plastic pollution and how it adversely affects wildlife, wildlife habitat and humans.",
+            "price": 200,
+            "image": "https://unescobmw.org/wp-content/uploads/2023/01/rosyfriends-book.jpg"
+        },
+        {
+            "id": "005",
+            "title": "Belly Fat Recipes",
+            "author": "F. Scott Fitzgerald",
+            "description": "The book Belly Fat Recipes and Evidence Based Tips by Charis Williams provides research-proven tips and tricks to lose belly fat, along with tasty plant-based, oil-free, and sugar-free recipes to enjoy. You won’t need to feel deprived to lose belly fat with this book.",
+            "price": 500,
+            "image": "https://unescobmw.org/wp-content/uploads/2023/04/beeing-belly-fat-recepies.jpg"
+        },
+        {
+            "id": "006",
+            "title": "If I could",
+            "author": "Harper Lee",
+            "description": "We all go through a culmination of rough times to finally learn about ourselves and life as a precious gift. I believe today that life is something between tragedies and hopes, desperations and good wishes, a killing duality that teaches you only one precious thing: be grateful and go beyond!",
+            "price": 90,
+            "image": "https://unescobmw.org/wp-content/uploads/2021/10/ae-2.jpg"
+        },
+        {
+            "id": "007",
+            "title": "Beeing",
+            "author": "George Orwell",
+            "description": "Help your child in developing his social and emotional learning. BEE’ing is a story about kindness and accepting differences, complete with activities at the end. It teaches our children to connect with their inner selves, accept themselves as they are, and respect the differences of others.",
+            "price": 100,
+            "image": "https://unescobmw.org/wp-content/uploads/2023/01/beeing-book-page.jpg"
+        }
+    ]
+}
