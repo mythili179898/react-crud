@@ -2,17 +2,13 @@ import { useEffect, useState } from "react";
 import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
+// import LogoutModal from "./LogoutModal";
 const AddCart = () => {
-    // const doc = new jsPDF();
-    // const [total, setTotal] = useState(0);
     const navigate = useNavigate();
     const [saveCart, setSaveCart] = useState("")
     const location = useLocation();
     const getBookData = location.state && location.state.getBookData; // getBookData is from home.js using state
-    // const [total, setTotal] = useState(0);
-    // get total amount
-    //   const totalAmount = prices.reduce((total, price) => total + price, 0);
-
+    console.log(getBookData, "getBookData")
     const [total, setTotal] = useState(0);
 
     useEffect(() => {
@@ -21,15 +17,13 @@ const AddCart = () => {
             setTotal(totalPrice);
         }
     }, [getBookData]);
+
     // const addItem = () => {
     //     e.preventDefault();
     //     let addItems = [...saveCart];
     //     addItems.push(getBookData);
     //     setSaveCart(addItems);
     //     navigate('/');
-
-
-
     // }
     const generatePDF = () => {
         const doc = new jsPDF();
@@ -73,45 +67,63 @@ const AddCart = () => {
 
 
     return (
-        <div className="table-cart m-4">
-            <div className="float-end d-flex align-items-center mb-3">
-                {/* <Link className="btn btn-primary mx-3" onClick={addItem}>Add Item</Link> */}
-                <button onClick={generatePDF} className="btn btn-info">Generate PDF</button>
-            </div>
-            <table className="table table-bordered">
-                <thead>
-                    <tr>
-                        {/* <td><b>Action</b></td> */}
-                        <td><b>S.No</b></td>
-                        <td><b>Book Name</b></td>
-                        <td><b>Author</b></td>
-                        <td><b>Price</b></td>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        getBookData && getBookData.map((item) => (
-                            <>
-                                <tr key={item.id}>
-                                    {/* <td>
+        <>
+
+            {getBookData.length ?
+                <div className="table-cart m-4">
+                    <div className="float-end d-flex align-items-center mb-3">
+                        {/* <Link className="btn btn-primary mx-3" onClick={addItem}>Add Item</Link> */}
+                        <Link className="btn btn-info" to={'/'}>Go Back</Link>
+
+                        <button onClick={generatePDF} className="btn btn-info">Generate PDF</button>
+                    </div>
+                    <table className="table table-bordered" >
+                        <thead>
+                            <tr>
+                                {/* <td><b>Action</b></td> */}
+                                <td><b>S.No</b></td>
+                                <td><b>Book Name</b></td>
+                                <td><b>Author</b></td>
+                                <td><b>Price</b></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                getBookData && getBookData.map((item) => (
+                                    <>
+                                        <tr key={item.id}>
+                                            {/* <td>
                                         <button className="btn btn-danger">Remove</button>
                                     </td> */}
-                                    <td>{item.id}</td>
-                                    <td>{item.title}</td>
-                                    <td>{item.author}</td>
-                                    <td>{item.price}</td>
+                                            <td>{item.id}</td>
+                                            <td>{item.title}</td>
+                                            <td>{item.author}</td>
+                                            <td>{item.price}</td>
 
-                                </tr>
-                            </>
-                        ))
-                    }
+                                        </tr>
+                                    </>
+                                ))
+                            }
 
-                </tbody>
-            </table>
-            <div className="float-end">
-                <p><b>Total Price : </b> {total}</p>
-            </div>
-        </div>
+                        </tbody>
+                    </table>
+                    <div className="float-end">
+                        <p><b>Total Price : </b> {total}</p>
+                    </div>
+                </div>
+
+                : <>
+                    <div className="cartEmpty">
+                        <p>Your Cart is Empty</p>
+                    </div>
+                    <Link className="btn btn-info" to={'/'}>Go Back</Link>
+
+                </>
+            }
+
+
+        </>
+
     );
 };
 
